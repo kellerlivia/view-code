@@ -1,0 +1,8 @@
+# macOS specific files
+.DS_Store
+
+# Xcode user-specific files
+view-code/view-code.xcodeproj/xcuserdata/kellerlivia.xcuserdatad/
+
+# Xcode scheme management
+view-code/view-code.xcodeproj/xcuserdata/kellerlivia.xcuserdatad/xcschemes/xcschememanagement.plist
