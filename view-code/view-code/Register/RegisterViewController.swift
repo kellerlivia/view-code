@@ -1,29 +1,29 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  view-code
 //
-//  Created by Livia Keller on 21/05/23.
+//  Created by Livia Keller on 22/05/23.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class RegisterViewController: UIViewController {
     
-    var loginView: LoginView?
+    var registerView: RegisterView?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
     
     override func loadView() {
-        self.loginView = LoginView()
-        view = loginView
+        self.registerView = RegisterView()
+        view = registerView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginView?.configTextFieldDelegate(self)
-        loginView?.delegate(self)
+        registerView?.configTextFieldDelegate(self)
+        registerView?.delegate(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: UITextFieldDelegate {
+extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -43,17 +43,16 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        loginView?.validaTextFields()
+        self.registerView?.validaTextFields()
     }
 }
 
-extension LoginViewController: LoginViewProtocol {
-    func actionLoginButton() {
-        
+extension RegisterViewController: RegisterViewProtocol {
+    func actionBackButton() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func actionRegisterButton() {
-        let vc: RegisterViewController = RegisterViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
 }
