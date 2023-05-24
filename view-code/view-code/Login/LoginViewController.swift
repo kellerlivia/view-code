@@ -49,7 +49,8 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginViewProtocol {
     func actionLoginButton() {
-        
+        let vc: HomeViewController = HomeViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func actionRegisterButton() {

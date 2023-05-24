@@ -15,6 +15,10 @@
 		D7C03BD72A1AC0AF00C61E29 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BD62A1AC0AF00C61E29 /* LoginView.swift */; };
 		D7C03BDA2A1C227100C61E29 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BD92A1C227100C61E29 /* RegisterView.swift */; };
 		D7C03BDC2A1C227D00C61E29 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BDB2A1C227D00C61E29 /* RegisterViewController.swift */; };
+		D7C03BE12A1EBAF300C61E29 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BE02A1EBAF300C61E29 /* HomeViewController.swift */; };
+		D7C03BE32A1EBAFA00C61E29 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BE22A1EBAFA00C61E29 /* HomeView.swift */; };
+		D7C03BE62A1EBFA400C61E29 /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BE52A1EBFA400C61E29 /* UserDetailTableViewCell.swift */; };
+		D7C03BE92A1ECD3800C61E29 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BE82A1ECD3800C61E29 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		D7C03BD62A1AC0AF00C61E29 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D7C03BD92A1C227100C61E29 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D7C03BDB2A1C227D00C61E29 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D7C03BE02A1EBAF300C61E29 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D7C03BE22A1EBAFA00C61E29 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D7C03BE52A1EBFA400C61E29 /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
+		D7C03BE82A1ECD3800C61E29 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 				D7C03BDE2A1C22A300C61E29 /* SupportingFiles */,
 				D7C03BDD2A1C228600C61E29 /* AppDelegate */,
 				D7C03BD82A1C226200C61E29 /* Register */,
+				D7C03BDF2A1EBAE200C61E29 /* Home */,
 				D7C03BD52A1AC09B00C61E29 /* Login */,
 			);
 			path = "view-code";
@@ -103,6 +112,33 @@
 				D7C03BCC2A1AB98000C61E29 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D7C03BDF2A1EBAE200C61E29 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D7C03BE72A1ECD2800C61E29 /* Model */,
+				D7C03BE42A1EBF6200C61E29 /* Cell */,
+				D7C03BE02A1EBAF300C61E29 /* HomeViewController.swift */,
+				D7C03BE22A1EBAFA00C61E29 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D7C03BE42A1EBF6200C61E29 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D7C03BE52A1EBFA400C61E29 /* UserDetailTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D7C03BE72A1ECD2800C61E29 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7C03BE82A1ECD3800C61E29 /* UserData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +212,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C03BC62A1AB97F00C61E29 /* LoginViewController.swift in Sources */,
+				D7C03BE62A1EBFA400C61E29 /* UserDetailTableViewCell.swift in Sources */,
 				D7C03BDA2A1C227100C61E29 /* RegisterView.swift in Sources */,
 				D7C03BC22A1AB97F00C61E29 /* AppDelegate.swift in Sources */,
 				D7C03BDC2A1C227D00C61E29 /* RegisterViewController.swift in Sources */,
 				D7C03BD72A1AC0AF00C61E29 /* LoginView.swift in Sources */,
+				D7C03BE32A1EBAFA00C61E29 /* HomeView.swift in Sources */,
+				D7C03BE12A1EBAF300C61E29 /* HomeViewController.swift in Sources */,
+				D7C03BE92A1ECD3800C61E29 /* UserData.swift in Sources */,
 				D7C03BC42A1AB97F00C61E29 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
