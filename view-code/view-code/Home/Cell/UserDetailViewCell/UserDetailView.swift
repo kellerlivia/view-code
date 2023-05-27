@@ -1,15 +1,13 @@
 //
-//  UserDetailTableViewCell.swift
+//  UserDetailView.swift
 //  view-code
 //
-//  Created by Livia Keller on 24/05/23.
+//  Created by Livia Keller on 27/05/23.
 //
 
 import UIKit
 
-class UserDetailTableViewCell: UITableViewCell {
-    
-    static let identifier: String = "UserDetailTableViewCell"
+class UserDetailView: UIView {
     
     lazy var userImageView: UIImageView = {
         let image = UIImageView()
@@ -27,9 +25,9 @@ class UserDetailTableViewCell: UITableViewCell {
         return label
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubView()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configSuperView()
         configConstrints()
     }
     
@@ -37,15 +35,9 @@ class UserDetailTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func addSubView() {
-        contentView.addSubview(userImageView)
-        contentView.addSubview(nameLabel)
-    }
-    
-    public func configCell(data: UserData) {
-        nameLabel.text = data.name
-        userImageView.image = UIImage(systemName: data.nameImage)
-        userImageView.tintColor = .black
+    private func configSuperView() {
+        self.addSubview(userImageView)
+        self.addSubview(nameLabel)
     }
     
     private func configConstrints() {
@@ -61,5 +53,4 @@ class UserDetailTableViewCell: UITableViewCell {
             
         ])
     }
-    
 }

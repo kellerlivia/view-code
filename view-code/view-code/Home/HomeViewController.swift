@@ -10,9 +10,14 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var homeView: HomeView?
-    var data: [UserData] = [UserData(name: "Lívia", nameImage: "person.fill"),
+    var dataUser: [UserData] = [UserData(name: "Lívia", nameImage: "person.fill"),
                             UserData(name: "Luisa", nameImage: "person.fill"),
                             UserData(name: "Eduarda", nameImage: "person.fill")]
+    
+    var dataSport: [Sport] = [Sport(name: "corrida", nameImage: "person.fill"),
+                              Sport(name: "natação", nameImage: "person.fill"),
+                              Sport(name: "ballet", nameImage: "person.fill"),
+                              Sport(name: "ginástica", nameImage: "person.fill")]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -35,16 +40,23 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return dataUser.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 3 {
+            let cell: SportTableViewCell? = tableView.dequeueReusableCell(withIdentifier: SportTableViewCell.identifier, for: indexPath) as? SportTableViewCell
+            cell?.dataCollection(data: dataSport)
+            return cell ?? UITableViewCell()
+        }
+        
         let cell: UserDetailTableViewCell? = tableView.dequeueReusableCell(withIdentifier: UserDetailTableViewCell.identifier, for: indexPath) as? UserDetailTableViewCell
-        cell?.configCell(data: data[indexPath.row])
+        cell?.configCell(data: dataUser[indexPath.row])
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 110
     }
 }
