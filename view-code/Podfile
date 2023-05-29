@@ -8,5 +8,11 @@ target 'view-code' do
   # Pods for view-code
 
 pod 'SnapKit', '~> 5.0.0'
+pod 'SnapKit', '~> 5.0.0'
+pod 'Firebase/Auth'
+pod 'Firebase/Analytics'
+pod 'Firebase/Firestore'
+pod 'Firebase/Storage'
+pod 'FirebaseUI/Storage'
 
 end

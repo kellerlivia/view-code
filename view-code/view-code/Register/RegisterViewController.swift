@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     
+    var auth: Auth?
+    var alert: Alert?
     var registerView: RegisterView?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -24,6 +27,8 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         registerView?.configTextFieldDelegate(self)
         registerView?.delegate(self)
+        self.auth = Auth.auth()
+        self.alert = Alert(controller: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +58,16 @@ extension RegisterViewController: RegisterViewProtocol {
     }
     
     func actionRegisterButton() {
+        guard let register = self.registerView else { return }
         
+        self.auth?.createUser(withEmail: register.getEmail(), password: register.getPassword(), completion: { (result, error) in
+            if error != nil {
+                self.alert?.getAlert(title: "atenção", message: "erro ao cadastrar, verifique os dados e tente novamente")
+            } else {
+                self.alert?.getAlert(title: "parabens", message: "usuario cadastrado com sucesso", completion: {
+                    self.navigationController?.popViewController(animated: true)
+                })
+            }
+        })
     }
 }
