@@ -37,6 +37,19 @@ class RegisterView: UIView {
         return image
     }()
     
+    lazy var nameTextField: UITextField = {
+        let text = UITextField()
+        text.translatesAutoresizingMaskIntoConstraints = false
+        text.placeholder = "digite seu nome"
+        text.keyboardType = .default
+        text.backgroundColor = .white
+        text.autocorrectionType = .no
+        text.autocapitalizationType = .none
+        text.borderStyle = .roundedRect
+        text.textColor = .black
+        return text
+    }()
+    
     lazy var emailTextField: UITextField = {
         let text = UITextField()
         text.translatesAutoresizingMaskIntoConstraints = false
@@ -91,21 +104,24 @@ class RegisterView: UIView {
     private func configSuperView() {
         self.addSubview(backButton)
         self.addSubview(userImage)
+        self.addSubview(nameTextField)
         self.addSubview(emailTextField)
         self.addSubview(passwordTextField)
         self.addSubview(registerButton)
     }
     
     public func configTextFieldDelegate(_ delegate: UITextFieldDelegate) {
+        nameTextField.delegate = delegate
         emailTextField.delegate = delegate
         passwordTextField.delegate = delegate
     }
     
     public func validaTextFields() {
+        let name: String = nameTextField.text ?? ""
         let email: String = emailTextField.text ?? ""
         let password: String = passwordTextField.text ?? ""
         
-        if !email.isEmpty && !password.isEmpty {
+        if !name.isEmpty && !email.isEmpty && !password.isEmpty {
             configButtonEnable(true)
         } else {
             configButtonEnable(false)
@@ -120,6 +136,10 @@ class RegisterView: UIView {
             registerButton.setTitleColor(.lightGray, for: .normal)
             registerButton.isEnabled = false
         }
+    }
+    
+    public func getName() -> String {
+        return nameTextField.text ?? ""
     }
     
     public func getEmail() -> String {
@@ -149,7 +169,12 @@ class RegisterView: UIView {
             backButton.topAnchor.constraint(equalTo: userImage.topAnchor),
             backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
-            emailTextField.topAnchor.constraint(equalTo: userImage.bottomAnchor, constant: 40),
+            nameTextField.topAnchor.constraint(equalTo: userImage.bottomAnchor, constant: 40),
+            nameTextField.heightAnchor.constraint(equalToConstant: 45),
+            nameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            nameTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            
+            emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 15),
             emailTextField.heightAnchor.constraint(equalToConstant: 45),
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
             emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),

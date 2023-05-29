@@ -12,6 +12,7 @@ class RegisterViewController: UIViewController {
     
     var auth: Auth?
     var alert: Alert?
+    var firestore: Firestore?
     var registerView: RegisterView?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -28,6 +29,7 @@ class RegisterViewController: UIViewController {
         registerView?.configTextFieldDelegate(self)
         registerView?.delegate(self)
         self.auth = Auth.auth()
+        firestore = Firestore.firestore()
         self.alert = Alert(controller: self)
     }
     
@@ -64,6 +66,15 @@ extension RegisterViewController: RegisterViewProtocol {
             if error != nil {
                 self.alert?.getAlert(title: "atenção", message: "erro ao cadastrar, verifique os dados e tente novamente")
             } else {
+                
+                if let idUsuario = result?.user.uid {
+                    self.firestore?.collection("usuarios").document(idUsuario).setData([
+                        "nome" : self.registerView?.getName() ?? "",
+                        "email" : self.registerView?.getEmail() ?? "",
+                        "id" : idUsuario
+                    ])
+                }
+                
                 self.alert?.getAlert(title: "parabens", message: "usuario cadastrado com sucesso", completion: {
                     self.navigationController?.popViewController(animated: true)
                 })

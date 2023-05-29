@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D3B8289A9ABD0B9F656B122 /* Pods_view_code.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E680A9B9A7F2462788063459 /* Pods_view_code.framework */; };
+		D74EC1042A25393C001F3E57 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC1032A25393C001F3E57 /* Extension+UIView.swift */; };
+		D74EC1072A253FEB001F3E57 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = D74EC1062A253FEB001F3E57 /* send.wav */; };
 		D7C03BC22A1AB97F00C61E29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BC12A1AB97F00C61E29 /* AppDelegate.swift */; };
 		D7C03BC42A1AB97F00C61E29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BC32A1AB97F00C61E29 /* SceneDelegate.swift */; };
 		D7C03BC62A1AB97F00C61E29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BC52A1AB97F00C61E29 /* LoginViewController.swift */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		1A7F2E0A80F87ACD7B3284F9 /* Pods-view-code.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-view-code.debug.xcconfig"; path = "Target Support Files/Pods-view-code/Pods-view-code.debug.xcconfig"; sourceTree = "<group>"; };
 		46EEA6A6BBB77DBB600DCD77 /* Pods-view-code.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-view-code.release.xcconfig"; path = "Target Support Files/Pods-view-code/Pods-view-code.release.xcconfig"; sourceTree = "<group>"; };
+		D74EC1032A25393C001F3E57 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		D74EC1062A253FEB001F3E57 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = send.wav; path = ../../../../../../../Downloads/send.wav; sourceTree = "<group>"; };
 		D7C03BBE2A1AB97F00C61E29 /* view-code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "view-code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C03BC12A1AB97F00C61E29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7C03BC32A1AB97F00C61E29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D74EC1022A253925001F3E57 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D74EC1052A253FDF001F3E57 /* Sounds */,
+				D74EC1032A25393C001F3E57 /* Extension+UIView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D74EC1052A253FDF001F3E57 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D74EC1062A253FEB001F3E57 /* send.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		D7C03BB52A1AB97F00C61E29 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +132,7 @@
 				D7C03BCF2A1AB98000C61E29 /* Info.plist */,
 				D7C03C082A25360C00C61E29 /* GoogleService-Info.plist */,
 				D7C03C052A25350F00C61E29 /* Alert */,
+				D74EC1022A253925001F3E57 /* Utils */,
 				D7C03BDE2A1C22A300C61E29 /* SupportingFiles */,
 				D7C03BDD2A1C228600C61E29 /* AppDelegate */,
 				D7C03BD82A1C226200C61E29 /* Register */,
@@ -291,6 +313,7 @@
 			files = (
 				D7C03BCE2A1AB98000C61E29 /* LaunchScreen.storyboard in Resources */,
 				D7C03BCB2A1AB98000C61E29 /* Assets.xcassets in Resources */,
+				D74EC1072A253FEB001F3E57 /* send.wav in Resources */,
 				D7C03C092A25360C00C61E29 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +383,7 @@
 				D7C03BC42A1AB97F00C61E29 /* SceneDelegate.swift in Sources */,
 				D7C03BF52A2233F300C61E29 /* SportCollectionCellView.swift in Sources */,
 				D7C03BF92A223CE600C61E29 /* Sport.swift in Sources */,
+				D74EC1042A25393C001F3E57 /* Extension+UIView.swift in Sources */,
 				D7C03BEB2A22212000C61E29 /* UserDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
