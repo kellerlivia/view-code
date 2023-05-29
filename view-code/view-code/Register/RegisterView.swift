@@ -122,6 +122,14 @@ class RegisterView: UIView {
         }
     }
     
+    public func getEmail() -> String {
+        return emailTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return passwordTextField.text ?? ""
+    }
+    
     @objc private func tappedBackButton() {
         self.delegate?.actionBackButton()
     }
@@ -159,4 +167,3 @@ class RegisterView: UIView {
         ])
     }
 }
-

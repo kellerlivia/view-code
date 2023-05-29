@@ -131,6 +131,14 @@ class LoginView: UIView {
         }
     }
     
+    public func getEmail() -> String {
+        return emailTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return passwordTextField.text ?? ""
+    }
+    
     public func configButtonEnable(_ enable: Bool) {
         if enable {
             loginButton.setTitleColor(.systemPink, for: .normal)
