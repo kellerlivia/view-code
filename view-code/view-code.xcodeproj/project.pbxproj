@@ -13,6 +13,7 @@
 		D74EC10A2A257EA3001F3E57 /* HomeContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC1092A257EA3001F3E57 /* HomeContactViewController.swift */; };
 		D74EC10C2A258139001F3E57 /* HomeContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC10B2A258139001F3E57 /* HomeContactView.swift */; };
 		D74EC10F2A25825D001F3E57 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC10E2A25825D001F3E57 /* NavView.swift */; };
+		D74EC1122A2599C9001F3E57 /* MessageAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC1112A2599C9001F3E57 /* MessageAllModel.swift */; };
 		D7C03BC22A1AB97F00C61E29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BC12A1AB97F00C61E29 /* AppDelegate.swift */; };
 		D7C03BC42A1AB97F00C61E29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BC32A1AB97F00C61E29 /* SceneDelegate.swift */; };
 		D7C03BC62A1AB97F00C61E29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BC52A1AB97F00C61E29 /* LoginViewController.swift */; };
@@ -43,6 +44,7 @@
 		D74EC1092A257EA3001F3E57 /* HomeContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContactViewController.swift; sourceTree = "<group>"; };
 		D74EC10B2A258139001F3E57 /* HomeContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContactView.swift; sourceTree = "<group>"; };
 		D74EC10E2A25825D001F3E57 /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
+		D74EC1112A2599C9001F3E57 /* MessageAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAllModel.swift; sourceTree = "<group>"; };
 		D7C03BBE2A1AB97F00C61E29 /* view-code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "view-code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C03BC12A1AB97F00C61E29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7C03BC32A1AB97F00C61E29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = NavView;
 			sourceTree = "<group>";
 		};
+		D74EC1102A2599B6001F3E57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D74EC1112A2599C9001F3E57 /* MessageAllModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D7C03BB52A1AB97F00C61E29 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		D7C03BC02A1AB97F00C61E29 /* view-code */ = {
 			isa = PBXGroup;
 			children = (
+				D74EC1102A2599B6001F3E57 /* Model */,
 				D7C03BCF2A1AB98000C61E29 /* Info.plist */,
 				D7C03C082A25360C00C61E29 /* GoogleService-Info.plist */,
 				D7C03C052A25350F00C61E29 /* Alert */,
@@ -413,6 +424,7 @@
 				D7C03BF92A223CE600C61E29 /* Sport.swift in Sources */,
 				D74EC1042A25393C001F3E57 /* Extension+UIView.swift in Sources */,
 				D7C03BEB2A22212000C61E29 /* UserDetailView.swift in Sources */,
+				D74EC1122A2599C9001F3E57 /* MessageAllModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -92,7 +92,7 @@ class NavView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "person.2")?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.addTarget(self, action: #selector(tappedContactButton), for: .touchUpInside)
-        button.tintColor = .systemPink
+        button.tintColor = .black
         return button
     }()
     
