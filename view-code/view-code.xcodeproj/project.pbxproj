@@ -10,6 +10,9 @@
 		5D3B8289A9ABD0B9F656B122 /* Pods_view_code.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E680A9B9A7F2462788063459 /* Pods_view_code.framework */; };
 		D74EC1042A25393C001F3E57 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC1032A25393C001F3E57 /* Extension+UIView.swift */; };
 		D74EC1072A253FEB001F3E57 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = D74EC1062A253FEB001F3E57 /* send.wav */; };
+		D74EC10A2A257EA3001F3E57 /* HomeContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC1092A257EA3001F3E57 /* HomeContactViewController.swift */; };
+		D74EC10C2A258139001F3E57 /* HomeContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC10B2A258139001F3E57 /* HomeContactView.swift */; };
+		D74EC10F2A25825D001F3E57 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC10E2A25825D001F3E57 /* NavView.swift */; };
 		D7C03BC22A1AB97F00C61E29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BC12A1AB97F00C61E29 /* AppDelegate.swift */; };
 		D7C03BC42A1AB97F00C61E29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BC32A1AB97F00C61E29 /* SceneDelegate.swift */; };
 		D7C03BC62A1AB97F00C61E29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BC52A1AB97F00C61E29 /* LoginViewController.swift */; };
@@ -37,6 +40,9 @@
 		46EEA6A6BBB77DBB600DCD77 /* Pods-view-code.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-view-code.release.xcconfig"; path = "Target Support Files/Pods-view-code/Pods-view-code.release.xcconfig"; sourceTree = "<group>"; };
 		D74EC1032A25393C001F3E57 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		D74EC1062A253FEB001F3E57 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = send.wav; path = ../../../../../../../Downloads/send.wav; sourceTree = "<group>"; };
+		D74EC1092A257EA3001F3E57 /* HomeContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContactViewController.swift; sourceTree = "<group>"; };
+		D74EC10B2A258139001F3E57 /* HomeContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContactView.swift; sourceTree = "<group>"; };
+		D74EC10E2A25825D001F3E57 /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		D7C03BBE2A1AB97F00C61E29 /* view-code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "view-code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C03BC12A1AB97F00C61E29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7C03BC32A1AB97F00C61E29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,24 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		D74EC1082A257DFA001F3E57 /* HomeContact */ = {
+			isa = PBXGroup;
+			children = (
+				D74EC10D2A258239001F3E57 /* NavView */,
+				D74EC1092A257EA3001F3E57 /* HomeContactViewController.swift */,
+				D74EC10B2A258139001F3E57 /* HomeContactView.swift */,
+			);
+			path = HomeContact;
+			sourceTree = "<group>";
+		};
+		D74EC10D2A258239001F3E57 /* NavView */ = {
+			isa = PBXGroup;
+			children = (
+				D74EC10E2A25825D001F3E57 /* NavView.swift */,
+			);
+			path = NavView;
+			sourceTree = "<group>";
+		};
 		D7C03BB52A1AB97F00C61E29 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +159,7 @@
 				D74EC1022A253925001F3E57 /* Utils */,
 				D7C03BDE2A1C22A300C61E29 /* SupportingFiles */,
 				D7C03BDD2A1C228600C61E29 /* AppDelegate */,
+				D74EC1082A257DFA001F3E57 /* HomeContact */,
 				D7C03BD82A1C226200C61E29 /* Register */,
 				D7C03BDF2A1EBAE200C61E29 /* Home */,
 				D7C03BD52A1AC09B00C61E29 /* Login */,
@@ -367,10 +392,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74EC10C2A258139001F3E57 /* HomeContactView.swift in Sources */,
 				D7C03BC62A1AB97F00C61E29 /* LoginViewController.swift in Sources */,
 				D7C03BE62A1EBFA400C61E29 /* UserDetailTableViewCell.swift in Sources */,
+				D74EC10A2A257EA3001F3E57 /* HomeContactViewController.swift in Sources */,
 				D7C03BDA2A1C227100C61E29 /* RegisterView.swift in Sources */,
 				D7C03C072A25352900C61E29 /* Alert.swift in Sources */,
+				D74EC10F2A25825D001F3E57 /* NavView.swift in Sources */,
 				D7C03BC22A1AB97F00C61E29 /* AppDelegate.swift in Sources */,
 				D7C03BDC2A1C227D00C61E29 /* RegisterViewController.swift in Sources */,
 				D7C03BD72A1AC0AF00C61E29 /* LoginView.swift in Sources */,

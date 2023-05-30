@@ -31,10 +31,18 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeView?.configTableViewProtocols(delegate: self, dataSource: self)
+        homeView?.delegate(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+}
+
+extension HomeViewController: HomeViewProtocol {
+    func actionChatButton() {
+        let vc: HomeContactViewController = HomeContactViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

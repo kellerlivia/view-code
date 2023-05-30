@@ -7,7 +7,34 @@
 
 import UIKit
 
+protocol HomeViewProtocol: AnyObject {
+    func actionChatButton()
+}
+
 class HomeView: UIView {
+    
+    private weak var delegate: HomeViewProtocol?
+    
+    func delegate(_ delegate: HomeViewProtocol?) {
+        self.delegate = delegate
+    }
+    
+    lazy var chatButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("acessar", for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.setTitleColor(.systemPink, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.backgroundColor = .white
+        button.addTarget(self, action: #selector(tappedChatButton), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc private func tappedChatButton() {
+        self.delegate?.actionChatButton()
+    }
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -35,13 +62,18 @@ class HomeView: UIView {
     }
     
     private func configSuperView() {
+        self.addSubview(chatButton)
         self.addSubview(tableView)
     }
     
     private func configConstrints() {
         NSLayoutConstraint.activate([
             
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            chatButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            chatButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            chatButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+            
+            tableView.topAnchor.constraint(equalTo: chatButton.bottomAnchor, constant: 30),
             tableView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
