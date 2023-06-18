@@ -150,7 +150,9 @@ extension HomeContactViewController: UICollectionViewDelegate,UICollectionViewDa
                 })
                 
             } else {
-                
+                let vc: ChatViewController = ChatViewController()
+//                vc.contato = self.listContact[indexPath.row]
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         } else {
             

@@ -35,6 +35,12 @@
 		D7C03BF52A2233F300C61E29 /* SportCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BF42A2233F300C61E29 /* SportCollectionCellView.swift */; };
 		D7C03BF92A223CE600C61E29 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BF82A223CE600C61E29 /* Sport.swift */; };
 		D7C03C072A25352900C61E29 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03C062A25352900C61E29 /* Alert.swift */; };
+		D7CC6F212A3EA1D100199A22 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC6F202A3EA1D100199A22 /* ChatViewController.swift */; };
+		D7CC6F232A3EA1DA00199A22 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC6F222A3EA1DA00199A22 /* ChatView.swift */; };
+		D7CC6F252A3EA2D300199A22 /* ChatNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC6F242A3EA2D300199A22 /* ChatNavigationView.swift */; };
+		D7CC6F272A3EAC8500199A22 /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC6F262A3EAC8500199A22 /* Extension+Button.swift */; };
+		D7CC6F2A2A3EB74000199A22 /* IncomingTextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC6F292A3EB74000199A22 /* IncomingTextMessageTableViewCell.swift */; };
+		D7CC6F2C2A3EB74F00199A22 /* OutgoingTextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC6F2B2A3EB74F00199A22 /* OutgoingTextMessageTableViewCell.swift */; };
 		D7EA84EF2A2D7097008983D5 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EA84EE2A2D7097008983D5 /* Extension+String.swift */; };
 		D7EA84F12A2D70D4008983D5 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EA84F02A2D70D4008983D5 /* Custom.swift */; };
 		D7EA84F52A2D7889008983D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7EA84F42A2D7889008983D5 /* GoogleService-Info.plist */; };
@@ -72,6 +78,12 @@
 		D7C03BF42A2233F300C61E29 /* SportCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionCellView.swift; sourceTree = "<group>"; };
 		D7C03BF82A223CE600C61E29 /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		D7C03C062A25352900C61E29 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		D7CC6F202A3EA1D100199A22 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D7CC6F222A3EA1DA00199A22 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		D7CC6F242A3EA2D300199A22 /* ChatNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavigationView.swift; sourceTree = "<group>"; };
+		D7CC6F262A3EAC8500199A22 /* Extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
+		D7CC6F292A3EB74000199A22 /* IncomingTextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageTableViewCell.swift; sourceTree = "<group>"; };
+		D7CC6F2B2A3EB74F00199A22 /* OutgoingTextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageTableViewCell.swift; sourceTree = "<group>"; };
 		D7EA84EB2A2D7078008983D5 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../../../Downloads/MessageCursoViewCode/MessageCursoViewCode/Utils/Fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		D7EA84EC2A2D7078008983D5 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../../../Downloads/MessageCursoViewCode/MessageCursoViewCode/Utils/Fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		D7EA84ED2A2D7078008983D5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../../Downloads/MessageCursoViewCode/MessageCursoViewCode/Utils/Fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -113,6 +125,7 @@
 		D74EC1022A253925001F3E57 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D7CC6F262A3EAC8500199A22 /* Extension+Button.swift */,
 				D7EA84EA2A2D704F008983D5 /* Fonts */,
 				D74EC1032A25393C001F3E57 /* Extension+UIView.swift */,
 				D7EA84EE2A2D7097008983D5 /* Extension+String.swift */,
@@ -194,6 +207,7 @@
 				D74EC1022A253925001F3E57 /* Utils */,
 				D7C03BDE2A1C22A300C61E29 /* SupportingFiles */,
 				D7C03BDD2A1C228600C61E29 /* AppDelegate */,
+				D7CC6F1F2A3EA1B300199A22 /* Chat */,
 				D74EC1082A257DFA001F3E57 /* HomeContact */,
 				D7C03BD82A1C226200C61E29 /* Register */,
 				D7C03BDF2A1EBAE200C61E29 /* Home */,
@@ -309,6 +323,26 @@
 				D7C03C062A25352900C61E29 /* Alert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		D7CC6F1F2A3EA1B300199A22 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				D7CC6F282A3EB72400199A22 /* Cells */,
+				D7CC6F202A3EA1D100199A22 /* ChatViewController.swift */,
+				D7CC6F222A3EA1DA00199A22 /* ChatView.swift */,
+				D7CC6F242A3EA2D300199A22 /* ChatNavigationView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		D7CC6F282A3EB72400199A22 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D7CC6F292A3EB74000199A22 /* IncomingTextMessageTableViewCell.swift */,
+				D7CC6F2B2A3EB74F00199A22 /* OutgoingTextMessageTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D7EA84EA2A2D704F008983D5 /* Fonts */ = {
@@ -437,6 +471,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D74EC10C2A258139001F3E57 /* HomeContactView.swift in Sources */,
+				D7CC6F232A3EA1DA00199A22 /* ChatView.swift in Sources */,
+				D7CC6F2A2A3EB74000199A22 /* IncomingTextMessageTableViewCell.swift in Sources */,
+				D7CC6F252A3EA2D300199A22 /* ChatNavigationView.swift in Sources */,
+				D7CC6F272A3EAC8500199A22 /* Extension+Button.swift in Sources */,
 				D7C03BC62A1AB97F00C61E29 /* LoginViewController.swift in Sources */,
 				D7C03BE62A1EBFA400C61E29 /* UserDetailTableViewCell.swift in Sources */,
 				D74EC10A2A257EA3001F3E57 /* HomeContactViewController.swift in Sources */,
@@ -446,6 +484,7 @@
 				D74EC10F2A25825D001F3E57 /* NavView.swift in Sources */,
 				D7C03BC22A1AB97F00C61E29 /* AppDelegate.swift in Sources */,
 				D7C03BDC2A1C227D00C61E29 /* RegisterViewController.swift in Sources */,
+				D7CC6F212A3EA1D100199A22 /* ChatViewController.swift in Sources */,
 				D7C03BD72A1AC0AF00C61E29 /* LoginView.swift in Sources */,
 				D7C03BEF2A2226EE00C61E29 /* SportTableViewCell.swift in Sources */,
 				D7C03BE32A1EBAFA00C61E29 /* HomeView.swift in Sources */,
@@ -458,6 +497,7 @@
 				D7C03BC42A1AB97F00C61E29 /* SceneDelegate.swift in Sources */,
 				D7C03BF52A2233F300C61E29 /* SportCollectionCellView.swift in Sources */,
 				D7C03BF92A223CE600C61E29 /* Sport.swift in Sources */,
+				D7CC6F2C2A3EB74F00199A22 /* OutgoingTextMessageTableViewCell.swift in Sources */,
 				D74EC1042A25393C001F3E57 /* Extension+UIView.swift in Sources */,
 				D7EA84F12A2D70D4008983D5 /* Custom.swift in Sources */,
 				D7C03BEB2A22212000C61E29 /* UserDetailView.swift in Sources */,
