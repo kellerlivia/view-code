@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5D3B8289A9ABD0B9F656B122 /* Pods_view_code.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E680A9B9A7F2462788063459 /* Pods_view_code.framework */; };
 		D74EC1042A25393C001F3E57 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC1032A25393C001F3E57 /* Extension+UIView.swift */; };
-		D74EC1072A253FEB001F3E57 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = D74EC1062A253FEB001F3E57 /* send.wav */; };
 		D74EC10A2A257EA3001F3E57 /* HomeContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC1092A257EA3001F3E57 /* HomeContactViewController.swift */; };
 		D74EC10C2A258139001F3E57 /* HomeContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC10B2A258139001F3E57 /* HomeContactView.swift */; };
 		D74EC10F2A25825D001F3E57 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EC10E2A25825D001F3E57 /* NavView.swift */; };
@@ -36,14 +35,15 @@
 		D7C03BF52A2233F300C61E29 /* SportCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BF42A2233F300C61E29 /* SportCollectionCellView.swift */; };
 		D7C03BF92A223CE600C61E29 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03BF82A223CE600C61E29 /* Sport.swift */; };
 		D7C03C072A25352900C61E29 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C03C062A25352900C61E29 /* Alert.swift */; };
-		D7C03C092A25360C00C61E29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7C03C082A25360C00C61E29 /* GoogleService-Info.plist */; };
+		D7EA84EF2A2D7097008983D5 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EA84EE2A2D7097008983D5 /* Extension+String.swift */; };
+		D7EA84F12A2D70D4008983D5 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EA84F02A2D70D4008983D5 /* Custom.swift */; };
+		D7EA84F52A2D7889008983D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7EA84F42A2D7889008983D5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A7F2E0A80F87ACD7B3284F9 /* Pods-view-code.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-view-code.debug.xcconfig"; path = "Target Support Files/Pods-view-code/Pods-view-code.debug.xcconfig"; sourceTree = "<group>"; };
 		46EEA6A6BBB77DBB600DCD77 /* Pods-view-code.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-view-code.release.xcconfig"; path = "Target Support Files/Pods-view-code/Pods-view-code.release.xcconfig"; sourceTree = "<group>"; };
 		D74EC1032A25393C001F3E57 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
-		D74EC1062A253FEB001F3E57 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = send.wav; path = ../../../../../../../Downloads/send.wav; sourceTree = "<group>"; };
 		D74EC1092A257EA3001F3E57 /* HomeContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContactViewController.swift; sourceTree = "<group>"; };
 		D74EC10B2A258139001F3E57 /* HomeContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContactView.swift; sourceTree = "<group>"; };
 		D74EC10E2A25825D001F3E57 /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
@@ -72,7 +72,12 @@
 		D7C03BF42A2233F300C61E29 /* SportCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionCellView.swift; sourceTree = "<group>"; };
 		D7C03BF82A223CE600C61E29 /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		D7C03C062A25352900C61E29 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		D7C03C082A25360C00C61E29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7EA84EB2A2D7078008983D5 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../../../Downloads/MessageCursoViewCode/MessageCursoViewCode/Utils/Fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		D7EA84EC2A2D7078008983D5 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../../../Downloads/MessageCursoViewCode/MessageCursoViewCode/Utils/Fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		D7EA84ED2A2D7078008983D5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../../Downloads/MessageCursoViewCode/MessageCursoViewCode/Utils/Fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		D7EA84EE2A2D7097008983D5 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		D7EA84F02A2D70D4008983D5 /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
+		D7EA84F42A2D7889008983D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E680A9B9A7F2462788063459 /* Pods_view_code.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_view_code.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,18 +113,12 @@
 		D74EC1022A253925001F3E57 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D74EC1052A253FDF001F3E57 /* Sounds */,
+				D7EA84EA2A2D704F008983D5 /* Fonts */,
 				D74EC1032A25393C001F3E57 /* Extension+UIView.swift */,
+				D7EA84EE2A2D7097008983D5 /* Extension+String.swift */,
+				D7EA84F02A2D70D4008983D5 /* Custom.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		D74EC1052A253FDF001F3E57 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				D74EC1062A253FEB001F3E57 /* send.wav */,
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 		D74EC1082A257DFA001F3E57 /* HomeContact */ = {
@@ -190,7 +189,7 @@
 			children = (
 				D74EC1102A2599B6001F3E57 /* Model */,
 				D7C03BCF2A1AB98000C61E29 /* Info.plist */,
-				D7C03C082A25360C00C61E29 /* GoogleService-Info.plist */,
+				D7EA84F42A2D7889008983D5 /* GoogleService-Info.plist */,
 				D7C03C052A25350F00C61E29 /* Alert */,
 				D74EC1022A253925001F3E57 /* Utils */,
 				D7C03BDE2A1C22A300C61E29 /* SupportingFiles */,
@@ -312,6 +311,16 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		D7EA84EA2A2D704F008983D5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D7EA84ED2A2D7078008983D5 /* Poppins-Bold.ttf */,
+				D7EA84EB2A2D7078008983D5 /* Poppins-Medium.ttf */,
+				D7EA84EC2A2D7078008983D5 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,8 +383,7 @@
 			files = (
 				D7C03BCE2A1AB98000C61E29 /* LaunchScreen.storyboard in Resources */,
 				D7C03BCB2A1AB98000C61E29 /* Assets.xcassets in Resources */,
-				D74EC1072A253FEB001F3E57 /* send.wav in Resources */,
-				D7C03C092A25360C00C61E29 /* GoogleService-Info.plist in Resources */,
+				D7EA84F52A2D7889008983D5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +450,7 @@
 				D7C03BEF2A2226EE00C61E29 /* SportTableViewCell.swift in Sources */,
 				D7C03BE32A1EBAFA00C61E29 /* HomeView.swift in Sources */,
 				D7C03BE12A1EBAF300C61E29 /* HomeViewController.swift in Sources */,
+				D7EA84EF2A2D7097008983D5 /* Extension+String.swift in Sources */,
 				D7C03BF32A22339300C61E29 /* SportCollectionViewCell.swift in Sources */,
 				D7C03BF12A22273B00C61E29 /* SportTableViewCellView.swift in Sources */,
 				D74EC11A2A2648E1001F3E57 /* ContactController.swift in Sources */,
@@ -450,6 +459,7 @@
 				D7C03BF52A2233F300C61E29 /* SportCollectionCellView.swift in Sources */,
 				D7C03BF92A223CE600C61E29 /* Sport.swift in Sources */,
 				D74EC1042A25393C001F3E57 /* Extension+UIView.swift in Sources */,
+				D7EA84F12A2D70D4008983D5 /* Custom.swift in Sources */,
 				D7C03BEB2A22212000C61E29 /* UserDetailView.swift in Sources */,
 				D74EC1122A2599C9001F3E57 /* MessageAllModel.swift in Sources */,
 				D74EC1172A264460001F3E57 /* MessageDetailCollectionViewCell.swift in Sources */,

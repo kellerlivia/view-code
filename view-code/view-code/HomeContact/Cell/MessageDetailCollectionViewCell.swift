@@ -23,7 +23,18 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
     lazy var userName: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 25)
+        return label
+    }()
+    
+    lazy var messageLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 2
+        label.textColor = .darkGray
+        label.font = .systemFont(ofSize: 15)
+        label.text = "aaaa"
         return label
     }()
     
@@ -31,6 +42,7 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         addSubview(imageView)
         addSubview(userName)
+        addSubview(messageLabel)
         configConstrints()
     }
     
@@ -43,34 +55,38 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
             
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 55),
             imageView.widthAnchor.constraint(equalToConstant: 55),
-            
+            imageView.heightAnchor.constraint(equalToConstant: 55),
+        
             userName.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 15),
-            userName.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
-            userName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15)
+            userName.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            userName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            messageLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 15),
+            messageLabel.topAnchor.constraint(equalTo: userName.bottomAnchor, constant: 5),
+            messageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
             
         ])
     }
     
-    public func setupViewContact(contact: Contact) {
-        self.setUserName(userName: contact.name ?? "")
-    }
-    
-    public func setupViewConversation(conversation: Conversation) {
-        setUserNameAttributedText(conversation)
-    }
-    
-    public func setUserNameAttributedText (_ conversation: Conversation) {
-        let attributText = NSMutableAttributedString(string: "\(conversation.name ?? "")", attributes: [NSAttributedString.Key.font : UIFont(name: "Footnote", size: 16) ?? UIFont(), NSAttributedString.Key.foregroundColor: UIColor.darkGray])
-        
-        attributText.append(NSMutableAttributedString(string: "\n\(conversation.lastMessage ?? "")", attributes: [NSAttributedString.Key.font : UIFont(name: "Footnote", size: 14) ?? UIFont(), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
-        
-        self.userName.attributedText = attributText
-    }
-    
-    public func setUserName(userName: String) {
-        let attributText = NSMutableAttributedString(string: userName, attributes: [NSAttributedString.Key.font : UIFont(name: "Footnote", size: 16) ?? UIFont(), NSAttributedString.Key.foregroundColor: UIColor.gray])
-        self.userName.attributedText = attributText
-    }
+//    public func setupViewContact(contact: String) {
+//        self.setUserName(userName: contact )
+//    }
+//
+//    public func setupViewConversation(conversation: Conversation) {
+//        setUserNameAttributedText(conversation)
+//    }
+//
+//    func setUserNameAttributedText(_ conversation: Conversation) {
+//        let attributedText = NSMutableAttributedString(string:"\(conversation.name ?? "")", attributes:[NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 16) ?? UIFont(),NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+//
+//        attributedText.append(NSAttributedString(string: "\n\(conversation.lastMessage ?? "")", attributes:[NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 14) ?? UIFont(), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
+//
+//        self.userName.attributedText = attributedText
+//    }
+//
+//    func setUserName(userName: String) {
+//        let attributText = NSMutableAttributedString(string: userName, attributes: [NSAttributedString.Key.font : UIFont(name: CustomFont.poppinsMedium, size: 16) ?? UIFont(), NSAttributedString.Key.foregroundColor:UIColor.darkGray])
+//        self.userName.attributedText = attributText
+//    }
 }

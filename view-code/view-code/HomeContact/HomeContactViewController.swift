@@ -11,20 +11,20 @@ import Firebase
 
 class HomeContactViewController: UIViewController {
     
-    var auth:Auth?
-    var db:Firestore?
-    var idUsuarioLogado:String?
+    var auth: Auth?
+    var db: Firestore?
+    var idUsuarioLogado: String?
     
-    var viewContact:Bool?
-    var emailUsuarioLogado:String?
-    var alert:Alert?
+    var viewContact: Bool?
+    var emailUsuarioLogado: String?
+    var alert: Alert?
     
-    var homeView:HomeContactView?
+    var homeView: HomeContactView?
     
-    var contato:ContactController?
-    var listContact:[Contact] = []
+    var contato: ContactController?
+    var listContact: [String] = []
     var listaConversas: [Conversation] = []
-    var conversasListener:ListenerRegistration?
+    var conversasListener: ListenerRegistration?
     
     override func loadView() {
         homeView = HomeContactView()
@@ -98,7 +98,14 @@ class HomeContactViewController: UIViewController {
             if let snapshot = snapShotResultado{
                 for document in snapshot.documents{
                     let dadosContato = document.data()
-                    self.listContact.append(Contact(dicionario: dadosContato))
+//                    self.listContact.append(Contact(dicionario: dadosContato))
+                    for (key, value) in dadosContato {
+                        if key == "nome", let nome = value as? String {
+                            self.listContact.append(nome)
+                        }
+                    }
+                    print(self.listContact)
+
                 }
                 self.homeView?.reloadCollectionView()
             }
@@ -123,12 +130,13 @@ extension HomeContactViewController: UICollectionViewDelegate,UICollectionViewDa
                 return cell
             } else {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MessageDetailCollectionViewCell.identifier, for: indexPath) as? MessageDetailCollectionViewCell
-                cell?.setupViewContact(contact: self.listContact[indexPath.row])
+//                cell?.setupViewContact(contact: self.listContact[indexPath.row])
+                cell?.userName.text = self.listContact[indexPath.row]
                 return cell ?? UICollectionViewCell()
             }
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MessageDetailCollectionViewCell.identifier, for: indexPath) as? MessageDetailCollectionViewCell
-            cell?.setupViewConversation(conversation: self.listaConversas[indexPath.row])
+//            cell?.setupViewConversation(conversation: self.listaConversas[indexPath.row])
             return cell ?? UICollectionViewCell()
         }
     }

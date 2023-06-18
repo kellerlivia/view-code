@@ -51,8 +51,8 @@ class MessageLastCollectionViewCell: UICollectionViewCell {
             imageView.widthAnchor.constraint(equalToConstant: 45),
             
             userName.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 15),
-            userName.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
-            userName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15)
+            userName.centerYAnchor.constraint(equalTo: centerYAnchor),
+            userName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
             
         ])
     }
